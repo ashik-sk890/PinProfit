@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PinShop Blueprint — Sell Digital Products on Etsy &amp; Gumroad With Organic Pinterest Traffic</title>
+<meta name="description" content="Launch and grow your Etsy or Gumroad digital product shop using organic Pinterest traffic — $0 ad spend. Includes the 10-Module Playbook, 25+ AI Prompts, 30+ Pin Hooks, 30-Day Planner, and Traffic Tracker.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,800;0,9..144,900;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ── DESIGN TOKENS ── */
+:root{
+  --P:#E60023;--PD:#B8001B;--PL:#FF3347;
+  --ink:#0D0D0D;--ink2:#2a2a2a;--mid:#555555;--light:#888888;--ghost:#f5f0eb;
+  --cream:#FFFAF6;--warm:#FFF7F2;
+  --gold:#C97C00;--gold-bg:#FFF8E6;--gold-br:rgba(201,124,0,.28);
+  --green:#0B8A3E;--green-bg:#F0FAF4;--green-br:#9EE0BB;
+  --border:#EAE0D8;
+  --r6:6px;--r10:10px;--r14:14px;--r20:20px;--r50:50px;
+  --sh-red:0 6px 32px rgba(230,0,35,.22);
+  --sh-card:0 2px 16px rgba(0,0,0,.07);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+.red{color:var(--P);}
+.gold{color:var(--gold);}
+.green{color:var(--green);}
+em{font-style:normal;}
+
+/* ── TOP ANNOUNCEMENT TICKER ── */
+.uticker{
+  background:var(--ink);color:#fff;
+  padding:9px 20px;font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;text-align:center;
+}
+.ut-gold{color:#FFD166;font-size:14px;}
+.ut-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--r50);padding:2px 11px;font-size:11px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.9px;white-space:nowrap;
+}
+.gdot{width:7px;height:7px;border-radius:50%;background:#2ECC71;flex-shrink:0;animation:glow 1.4s infinite;}
+@keyframes glow{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.38;transform:scale(1.6)}}
+
+/* ── NAV ── */
+nav{
+  background:#fff;border-bottom:1.5px solid var(--border);
+  padding:11px 24px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(0,0,0,.06);
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:800;color:var(--ink);letter-spacing:-.3px;}
+.pin-logo{width:32px;height:32px;flex-shrink:0;}
+.nav-r{display:flex;align-items:center;gap:14px;}
+.nav-live{font-size:12px;color:var(--mid);display:flex;align-items:center;gap:6px;white-space:nowrap;font-weight:700;}
+.nav-btn{
+  background:var(--P);color:#fff;padding:9px 20px;border-radius:var(--r50);
+  font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap;
+  transition:background .2s,box-shadow .2s,transform .15s;
+}
+.nav-btn:hover{background:var(--PD);box-shadow:var(--sh-red);transform:translateY(-1px);}
+
+/* ── BUNDLE VALUE STRIP ── */
+.pstrip{background:#fff;border-bottom:1px solid var(--border);padding:9px 24px;}
+.pstrip-in{max-width:720px;margin:0 auto;}
+.plabels{display:flex;justify-content:space-between;font-size:12px;font-weight:800;margin-bottom:6px;gap:8px;flex-wrap:wrap;}
+.plabels .red-l{color:var(--P);}
+.ptrack{height:8px;background:#F0E4DC;border-radius:var(--r50);overflow:hidden;}
+.pfill{height:100%;width:100%;border-radius:var(--r50);background:linear-gradient(90deg,var(--PD),var(--P),#F59E0B);}
+
+/* ── HERO ── */
+.hero{
+  padding:54px 24px 48px;text-align:center;
+  background:linear-gradient(170deg,#fff3f4 0%,#fff9f4 52%,#fffcf8 100%);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;width:900px;height:900px;border-radius:50%;
+  background:radial-gradient(circle,rgba(230,0,35,.045) 0%,transparent 65%);
+  top:-380px;left:50%;transform:translateX(-50%);pointer-events:none;
+}
+.hero-eye{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold-bg);border:1px solid var(--gold-br);
+  color:var(--gold);font-size:12px;font-weight:800;text-transform:uppercase;
+  letter-spacing:1.1px;padding:7px 16px;border-radius:var(--r50);margin-bottom:24px;
+}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(33px,7.2vw,68px);
+  font-weight:900;line-height:1.05;
+  max-width:860px;margin:0 auto 16px;color:var(--ink);
+}
+.hero h1 .hl{color:var(--P);}
+.hero h1 .stroke{-webkit-text-stroke:2px var(--P);color:transparent;}
+
+.hero-proof{
+  display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  background:#fff;border:1.5px solid var(--green-br);border-radius:var(--r10);
+  padding:9px 18px;margin:14px auto 20px;font-size:13px;font-weight:700;color:var(--ink);
+}
+.hp-num{font-size:16px;font-weight:800;color:var(--green);}
+.hp-sep{color:#ccc;}
+
+.hero-sub{font-size:clamp(15px,2.2vw,18px);color:var(--mid);max-width:620px;margin:0 auto 34px;line-height:1.75;font-weight:500;}
+.hero-sub strong{color:var(--ink);font-weight:800;}
+
+/* ── HERO SPLIT GRID (MOCKUP + OFFER CARD) ── */
+.hero-grid{
+  max-width:960px;margin:0 auto 28px;
+  display:grid;grid-template-columns:1.08fr 0.92fr;gap:28px;align-items:center;text-align:left;
+}
+.mockup-box{
+  background:#fff;border:1.5px solid var(--border);border-radius:var(--r20);
+  padding:18px;box-shadow:0 16px 46px rgba(0,0,0,.09);position:relative;
+}
+.mockup-box img{width:100%;height:auto;border-radius:14px;display:block;object-fit:cover;}
+.mockup-cap{
+  margin-top:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
+  font-size:12px;font-weight:700;color:var(--mid);
+}
+.mockup-cap strong{color:var(--ink);}
+.mockup-pill{background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-br);padding:3px 10px;border-radius:var(--r50);font-size:11px;font-weight:800;}
+
+/* ── PRICE CARD ── */
+.pcard{
+  background:#fff;border:2.5px solid var(--P);border-radius:var(--r20);
+  padding:32px 26px 24px;box-shadow:var(--sh-red);position:relative;text-align:center;
+}
+.pcribbon{
+  position:absolute;top:-15px;left:50%;transform:translateX(-50%);
+  background:var(--P);color:#fff;font-size:11px;font-weight:800;
+  letter-spacing:.7px;text-transform:uppercase;padding:5px 18px;border-radius:var(--r50);
+  white-space:nowrap;box-shadow:0 3px 10px rgba(230,0,35,.35);
+}
+.price-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:4px;}
+.p-was{font-size:22px;color:#B5B5B5;text-decoration:line-through;font-weight:600;}
+.p-now{font-family:'Fraunces',serif;font-size:64px;font-weight:900;color:var(--P);line-height:1;}
+.price-tag{text-align:center;font-size:13px;font-weight:800;color:var(--green);margin-bottom:16px;}
+
+.bundle-checklist{
+  text-align:left;background:var(--green-bg);border:1px solid var(--green-br);
+  border-radius:var(--r10);padding:14px 16px;margin-bottom:18px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.bc-item{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12.5px;color:#084C24;font-weight:700;}
+.bc-val{font-size:11px;color:var(--green);background:#fff;border:1px solid var(--green-br);padding:2px 8px;border-radius:var(--r50);white-space:nowrap;}
+
+/* CTA BUTTON */
+.cta{
+  display:block;width:100%;background:var(--P);color:#fff;text-align:center;
+  padding:18px 20px;border-radius:var(--r14);font-size:16.5px;font-weight:800;
+  text-decoration:none;letter-spacing:.1px;transition:all .25s;
+  box-shadow:var(--sh-red);position:relative;overflow:hidden;
+}
+.cta::after{
+  content:'';position:absolute;top:0;left:-110%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
+  animation:sheen 3.2s infinite;
+}
+@keyframes sheen{to{left:160%;}}
+.cta:hover{background:var(--PD);transform:translateY(-2px);box-shadow:0 10px 36px rgba(230,0,35,.48);}
+.cta-micro{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:11px;font-size:12px;color:var(--light);flex-wrap:wrap;}
+
+/* PROOF PILLS */
+.pprow{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.pp{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r50);
+  padding:7px 16px;font-size:13px;color:var(--mid);font-weight:700;
+  display:flex;align-items:center;gap:6px;box-shadow:var(--sh-card);
+}
+
+/* ── NUMBER STAT BAR ── */
+.sbar{background:var(--P);padding:30px 24px;}
+.sbar-row{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center;}
+.sitem .sn{font-family:'Fraunces',serif;font-size:clamp(22px,4.5vw,38px);font-weight:900;color:#fff;line-height:1;}
+.sitem .sl{font-size:11px;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.7px;margin-top:5px;font-weight:700;}
+
+/* ── SECTION COMMON ── */
+section{padding:64px 24px;}
+.sw{max-width:920px;margin:0 auto;}
+.stag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.8px;color:var(--P);margin-bottom:10px;}
+.sh{font-family:'Fraunces',serif;font-size:clamp(26px,5.5vw,44px);font-weight:900;line-height:1.12;margin-bottom:14px;color:var(--ink);}
+.sh .hl{color:var(--P);}
+.sp{font-size:16px;color:var(--mid);line-height:1.78;max-width:650px;font-weight:500;}
+
+.sub-hl{
+  display:inline-block;background:var(--ink);color:#fff;
+  font-size:clamp(13px,2vw,15px);font-weight:800;
+  padding:8px 18px;border-radius:var(--r6);margin-bottom:18px;
+}
+.sub-hl .accent{color:#FFD166;}
+
+/* ── WHO GRID ── */
+.sec-cream{background:var(--cream);}
+.sec-white{background:#fff;}
+.who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:32px;}
+.wc{
+  background:#fff;border-radius:var(--r14);padding:22px;border:1px solid var(--border);
+  position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s;
+}
+.wc:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.09);}
+.wc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--P);}
+.we{font-size:28px;margin-bottom:10px;}
+.wc h3{font-size:15px;font-weight:800;margin-bottom:7px;}
+.wc p{font-size:13.5px;color:var(--mid);line-height:1.65;font-weight:500;}
+.wc-num{display:inline-block;margin-top:10px;background:var(--ghost);border-radius:var(--r6);padding:4px 10px;font-size:12px;font-weight:800;color:var(--P);}
+
+/* ── PAIN ── */
+.pain-list{margin-top:28px;display:flex;flex-direction:column;gap:10px;}
+.pi{display:flex;align-items:flex-start;gap:14px;background:#FFF4F5;border:1px solid #FFD5D8;border-radius:var(--r14);padding:16px 18px;}
+.pi-x{font-size:18px;flex-shrink:0;margin-top:1px;}
+.pi-t{font-size:14px;color:var(--mid);line-height:1.62;font-weight:500;}
+.pi-t strong{color:var(--ink);font-weight:800;}
+.sol{
+  margin-top:26px;background:linear-gradient(135deg,var(--green-bg),#FFFAF0);
+  border:1.5px solid var(--green-br);border-radius:var(--r14);padding:28px;text-align:center;
+}
+.sol p{font-size:16px;line-height:1.78;color:var(--ink);font-weight:500;}
+.sol strong{color:var(--green);font-weight:800;}
+
+/* ── INSIDE GRID ── */
+.inside-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-top:34px;}
+.ic{background:#fff;border-radius:var(--r20);padding:24px;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;position:relative;}
+.ic:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,.1);}
+.ic-n{font-size:11px;font-weight:800;color:var(--P);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:9px;}
+.ic h3{font-size:15px;font-weight:800;margin-bottom:8px;line-height:1.32;color:var(--ink);}
+.ic p{font-size:13.5px;color:var(--mid);line-height:1.65;font-weight:500;}
+.ic-tag{display:inline-block;margin-top:12px;background:var(--gold-bg);color:var(--gold);font-size:11px;font-weight:800;padding:3px 11px;border-radius:var(--r50);}
+
+/* ── BONUS STACK ── */
+.bonus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:28px;}
+.bcard{
+  background:linear-gradient(180deg,#fff 0%,var(--warm) 100%);
+  border:1.5px solid var(--gold-br);border-radius:var(--r14);padding:20px;
+}
+.b-badge{display:inline-block;background:var(--gold);color:#fff;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;padding:3px 10px;border-radius:var(--r50);margin-bottom:10px;}
+.bcard h4{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+.bcard p{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:10px;}
+.b-val{font-size:12px;font-weight:800;color:var(--green);}
+
+/* ── OUTBOUND CLICKS SECTION ── */
+.oc-sec{background:var(--ink);padding:72px 24px;}
+.oc-wrap{max-width:920px;margin:0 auto;}
+.oc-tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.8px;color:#FFD166;margin-bottom:12px;}
+.oc-h{font-family:'Fraunces',serif;font-size:clamp(26px,5.5vw,44px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:10px;}
+.oc-h em{color:var(--P);}
+.oc-sub{font-size:16px;color:#A5A5A5;line-height:1.72;max-width:620px;font-weight:500;margin-bottom:34px;}
+.oc-sub strong{color:#EAEAEA;font-weight:800;}
+.oc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:34px;}
+.occard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);border-radius:var(--r14);padding:22px;transition:all .2s;}
+.occard:hover{background:rgba(230,0,35,.12);border-color:var(--P);}
+.occard-icon{font-size:28px;margin-bottom:12px;}
+.occard h3{font-size:15px;font-weight:800;color:#fff;margin-bottom:7px;}
+.occard p{font-size:13.5px;color:#A0A0A0;line-height:1.65;font-weight:500;}
+.occard .oct{display:inline-block;margin-top:10px;background:rgba(230,0,35,.22);color:#FF7385;font-size:11px;font-weight:800;padding:3px 10px;border-radius:var(--r50);}
+.oc-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;}
+.oc-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--r14);padding:20px;text-align:center;}
+.oc-stat .osn{font-family:'Fraunces',serif;font-size:34px;font-weight:900;color:var(--P);line-height:1;}
+.oc-stat .osl{font-size:12px;color:#8E8E8E;margin-top:6px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;}
+
+/* ── NICHES ── */
+.sec-dark{background:#1A1A1A;}
+.sec-dark .sh{color:#fff;}
+.sec-dark .sp{color:#A0A0A0;}
+.niche-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:10px;margin-top:30px;}
+.np{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r10);padding:13px 15px;color:#E0E0E0;font-size:13px;font-weight:700;
+  display:flex;align-items:center;gap:9px;transition:all .2s;
+}
+.np:hover{background:rgba(230,0,35,.2);border-color:var(--P);color:#fff;}
+.niche-note{
+  margin-top:22px;background:rgba(201,124,0,.12);border:1px solid var(--gold-br);
+  border-radius:var(--r10);padding:14px 18px;color:#FFD166;font-size:13px;font-weight:700;text-align:center;
+}
+
+/* ── 7 DAY SPRINT ── */
+.promise-sec{background:var(--P);padding:64px 24px;}
+.promise-wrap{max-width:880px;margin:0 auto;text-align:center;}
+.promise-wrap .ptag{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:var(--r50);padding:4px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:#fff;margin-bottom:18px;}
+.promise-h{font-family:'Fraunces',serif;font-size:clamp(28px,5.5vw,46px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:14px;}
+.promise-h u{text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:5px;}
+.promise-sub{font-size:16px;color:rgba(255,255,255,.88);max-width:580px;margin:0 auto 34px;line-height:1.72;font-weight:500;}
+.pday-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:12px;text-align:left;}
+.pday{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:var(--r14);padding:18px;}
+.pday-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.72);margin-bottom:8px;}
+.pday h4{font-size:14.5px;font-weight:800;color:#fff;margin-bottom:6px;}
+.pday p{font-size:12.5px;color:rgba(255,255,255,.84);line-height:1.6;font-weight:500;}
+
+/* ── ROADMAP ── */
+.weeks{margin-top:36px;position:relative;}
+.weeks::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:2px;background:var(--border);}
+.week{display:flex;gap:22px;align-items:flex-start;padding-bottom:30px;}
+.wkc{
+  width:56px;height:56px;border-radius:50%;background:var(--P);color:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  flex-shrink:0;position:relative;z-index:2;box-shadow:var(--sh-red);
+}
+.wkc .wl{font-size:8.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;opacity:.8;}
+.wkc .wn{font-family:'Fraunces',serif;font-size:22px;font-weight:900;line-height:1;}
+.wkb{padding-top:6px;flex:1;}
+.wkb h3{font-size:16px;font-weight:800;margin-bottom:5px;}
+.wkb p{font-size:13.5px;color:var(--mid);line-height:1.65;font-weight:500;}
+.wm{display:inline-flex;align-items:center;gap:6px;margin-top:9px;background:var(--gold-bg);border:1px solid var(--gold-br);border-radius:var(--r50);padding:4px 12px;font-size:12px;color:var(--gold);font-weight:800;}
+
+/* ── EXAMPLE USE CASES / EDITABLE REVIEW CARDS ── */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-top:30px;}
+.tc{background:#fff;border-radius:var(--r20);padding:24px;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;}
+.tc:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.09);}
+.tc-stars{color:#F59E0B;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;font-weight:800;}
+.tc-q{font-size:13.5px;color:var(--mid);line-height:1.72;margin-bottom:14px;border-left:3px solid var(--P);padding-left:14px;font-weight:500;}
+.tc-res{background:var(--green-bg);border:1px solid var(--green-br);border-radius:var(--r10);padding:11px 14px;margin-bottom:14px;}
+.tc-res strong{font-size:14px;color:#096030;font-weight:800;display:block;}
+.tc-res span{font-size:12px;color:#2E8A56;font-weight:600;}
+.tc-author{display:flex;align-items:center;gap:10px;}
+.av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:900;font-size:13px;color:#fff;flex-shrink:0;}
+.a1{background:linear-gradient(135deg,#E74C3C,#C0392B);}
+.a2{background:linear-gradient(135deg,#2980B9,#1A5276);}
+.a3{background:linear-gradient(135deg,#E67E22,#CA6F1E);}
+.a4{background:linear-gradient(135deg,#8E44AD,#6C3483);}
+.a5{background:linear-gradient(135deg,#1ABC9C,#148F77);}
+.a6{background:linear-gradient(135deg,#E91E63,#AD1457);}
+.tc-info strong{font-size:13px;font-weight:800;display:block;}
+.tc-info span{font-size:12px;color:var(--light);}
+.tc-badge{display:inline-flex;align-items:center;gap:5px;margin-top:10px;background:#FFF4F5;border:1px solid #FFD5D8;border-radius:var(--r50);padding:3px 10px;font-size:11px;font-weight:800;color:var(--P);}
+
+/* ── GUARANTEE ── */
+.gbox{
+  background:linear-gradient(135deg,#F9FFF5,#FFFAF0);
+  border:2px solid var(--green-br);border-radius:var(--r20);
+  padding:46px 38px;text-align:center;max-width:680px;margin:0 auto;
+}
+.gi{font-size:50px;margin-bottom:14px;}
+.gbox h2{font-family:'Fraunces',serif;font-size:clamp(22px,4vw,32px);font-weight:900;margin-bottom:14px;}
+.gbox h2 em{color:var(--green);}
+.gbox p{font-size:14.5px;color:var(--mid);line-height:1.8;font-weight:500;}
+.gchips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.gc{background:#fff;border:1px solid var(--green-br);border-radius:var(--r50);padding:6px 14px;font-size:12px;font-weight:800;color:var(--green);}
+
+/* ── FAQ ── */
+.flist{margin-top:30px;display:flex;flex-direction:column;gap:10px;}
+.fi{background:#fff;border:1px solid var(--border);border-radius:var(--r14);overflow:hidden;}
+.fq{padding:17px 18px;font-weight:800;font-size:14.5px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;line-height:1.4;}
+.fqicon{font-size:20px;color:var(--P);flex-shrink:0;transition:transform .3s;font-weight:300;line-height:1;}
+.fi.open .fqicon{transform:rotate(45deg);}
+.fa{font-size:14px;color:var(--mid);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s;font-weight:500;}
+.fi.open .fa{max-height:360px;padding:0 18px 18px;}
+
+/* ── FINAL CTA ── */
+.fsec{background:var(--ink);padding:80px 24px;text-align:center;}
+.fsec h2{font-family:'Fraunces',serif;font-size:clamp(30px,6vw,52px);font-weight:900;color:#fff;line-height:1.08;margin-bottom:12px;}
+.fsec h2 .hl{color:#FFD166;}
+.fsec .fsub{display:block;color:#9A9A9A;font-size:15.5px;margin:0 auto 34px;max-width:520px;line-height:1.7;font-weight:500;}
+.fpb{max-width:380px;margin:0 auto 24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r20);padding:24px;}
+.fprow{display:flex;align-items:center;justify-content:center;gap:14px;}
+.fpwas{color:#777;font-size:22px;text-decoration:line-through;font-weight:600;}
+.fpnow{font-family:'Fraunces',serif;font-size:58px;font-weight:900;color:#fff;line-height:1;}
+.fpsave{color:#FFD166;font-size:13px;font-weight:800;margin-top:6px;}
+.cta-lg{
+  display:inline-block;background:var(--P);color:#fff;
+  padding:20px 46px;border-radius:var(--r14);font-size:18px;font-weight:800;
+  text-decoration:none;transition:all .25s;box-shadow:0 6px 30px rgba(230,0,35,.5);
+}
+.cta-lg:hover{background:var(--PD);transform:translateY(-2px);box-shadow:0 12px 40px rgba(230,0,35,.6);}
+.trust-row{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin-top:22px;}
+.tr{color:#888;font-size:12px;display:flex;align-items:center;gap:4px;font-weight:700;}
+.tr b{color:#BDBDBD;}
+
+/* ── FOOTER ── */
+footer{background:#080808;padding:26px 24px;text-align:center;font-size:12px;color:#666;}
+footer a{color:#888;text-decoration:none;}footer a:hover{color:#bbb;}
+
+/* ── MOBILE FLOAT BAR ── */
+.fbar{
+  display:none;position:fixed;bottom:0;left:0;right:0;
+  background:#fff;border-top:2.5px solid var(--P);
+  padding:10px 18px;z-index:300;align-items:center;justify-content:space-between;
+  gap:10px;box-shadow:0 -4px 22px rgba(0,0,0,.14);
+}
+.fb-was{font-size:11px;color:#999;text-decoration:line-through;font-weight:600;}
+.fb-price{font-family:'Fraunces',serif;font-size:26px;font-weight:900;color:var(--P);line-height:1.1;}
+.fb-spots{font-size:11px;color:var(--green);font-weight:800;}
+.fb-cta{background:var(--P);color:#fff;padding:13px 20px;border-radius:var(--r10);font-size:14px;font-weight:800;text-decoration:none;white-space:nowrap;}
+
+/* ── SETUP MODAL (ONLY IF CHECKOUT URL IS NOT CONFIGURED YET) ── */
+.setup-modal{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:500;
+  align-items:center;justify-content:center;padding:20px;
+}
+.setup-modal.open{display:flex;}
+.setup-card{
+  background:#fff;border-radius:var(--r20);max-width:460px;width:100%;padding:28px;text-align:left;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);border:2px solid var(--P);
+}
+.setup-card h3{font-family:'Fraunces',serif;font-size:22px;margin-bottom:10px;}
+.setup-card p{font-size:14px;color:var(--mid);line-height:1.65;margin-bottom:14px;}
+.setup-card code{background:var(--ghost);padding:2px 6px;border-radius:4px;font-size:12.5px;color:var(--P);}
+.setup-close{background:var(--ink);color:#fff;border:none;padding:11px 20px;border-radius:var(--r10);font-weight:800;cursor:pointer;font-size:13px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;max-width:520px;}
+}
+@media(max-width:640px){
+  .fbar{display:flex;}
+  body{padding-bottom:78px;}
+  .sbar-row{grid-template-columns:repeat(2,1fr);gap:14px;}
+  .weeks::before{left:24px;}
+  .wkc{width:48px;height:48px;}
+  .gbox{padding:28px 18px;}
+  .oc-stat-row{grid-template-columns:1fr;}
+  .nav-live{display:none;}
+  .promise-sec{padding:48px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- =========================================================================
+     EASY SETUP CONFIG FOR STORE OWNER (EDIT ONLY THIS SECTION!)
+     ========================================================================= -->
+<script>
+const SITE_CONFIG = {
+  brandName: "PinShop Blueprint",
+  // STEP 1: Paste your Gumroad (or Payhip) checkout link between the quotes below:
+  checkoutUrl: "https://YOURNAME.gumroad.com/l/pinshop-blueprint",
+  regularPrice: "$129",
+  launchPrice: "$27",
+  savingsLine: "Save $102 — Complete 5-Part Launch Bundle",
+  supportEmail: "support@yourdomain.com"
+};
+</script>
+
+<!-- TOP BAR -->
+<div class="uticker">
+  <span>⚡</span>
+  <span>Launch Bundle Offer — Get all 5 digital assets for <span class="ut-gold" data-price="launch">$27</span> (<span data-price="regular">$129</span> value)</span>
+  <span class="ut-badge"><span class="gdot"></span>Instant Download</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="brand">
+    <svg class="pin-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#E60023"/>
+      <path d="M12.3 4C8.3 4 6 6.8 6 9.5c0 1.8.7 3.4 2.1 4 .2.1.4 0 .5-.2l.2-.8c.1-.2 0-.4-.1-.6-.4-.5-.7-1.2-.7-2.1C8 7.6 9.7 6 12.1 6c2.2 0 3.4 1.3 3.4 3.1 0 2.3-1 4.2-2.6 4.2-.8 0-1.4-.7-1.2-1.5.2-.9.7-1.9.7-2.6 0-.8-.4-1.4-1.3-1.4-1 0-1.8 1-1.8 2.4 0 .9.3 1.5.3 1.5l-1.3 5.4c-.2.7-.1 1.7 0 2.4 0 .2.3.3.4.1.2-.3 1.3-1.6 1.7-3l.7-2.6c.3.6 1.2 1.2 2.2 1.2 2.9 0 4.9-2.7 4.9-6C17.3 6.4 15.3 4 12.3 4z" fill="white"/>
+    </svg>
+    <span data-brand>PinShop Blueprint</span>
+  </a>
+  <div class="nav-r">
+    <div class="nav-live"><span class="gdot"></span>5-Part Bundle · <span data-price="launch">$27</span></div>
+    <a href="#get" class="nav-btn">Get Instant Access →</a>
+  </div>
+</nav>
+
+<!-- VALUE STRIP -->
+<div class="pstrip">
+  <div class="pstrip-in">
+    <div class="plabels">
+      <span class="red-l">📦 Full Digital Product + Traffic System Included</span>
+      <span style="color:var(--mid)">10 Modules + 4 Bonus Toolkits · Instant PDF &amp; CSV</span>
+    </div>
+    <div class="ptrack"><div class="pfill"></div></div>
+  </div>
+</div>
+
+<!-- ████████  HERO  ████████ -->
+<section class="hero">
+  <div class="hero-eye">
+    <svg width="14" height="14" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#E60023"/><path d="M12.3 4C8.3 4 6 6.8 6 9.5c0 1.8.7 3.4 2.1 4 .2.1.4 0 .5-.2l.2-.8c.1-.2 0-.4-.1-.6-.4-.5-.7-1.2-.7-2.1C8 7.6 9.7 6 12.1 6c2.2 0 3.4 1.3 3.4 3.1 0 2.3-1 4.2-2.6 4.2-.8 0-1.4-.7-1.2-1.5.2-.9.7-1.9.7-2.6 0-.8-.4-1.4-1.3-1.4-1 0-1.8 1-1.8 2.4 0 .9.3 1.5.3 1.5l-1.3 5.4c-.2.7-.1 1.7 0 2.4 0 .2.3.4.1.2-.3 1.3-1.6 1.7-3l.7-2.6c.3.6 1.2 1.2 2.2 1.2 2.9 0 4.9-2.7 4.9-6C17.3 6.4 15.3 4 12.3 4z" fill="white"/></svg>
+    Pinterest Traffic System for Etsy &amp; Gumroad Sellers
+  </div>
+
+  <h1>
+    Sell Digital Products<br>
+    On <span class="hl">Etsy &amp; Gumroad</span> —<br>
+    Powered By Free<br>
+    <span class="stroke">Pinterest Traffic.</span>
+  </h1>
+
+  <div class="hero-proof">
+    <span class="hp-num">5-Part Complete Bundle</span>
+    <span class="hp-sep">·</span>
+    <span>No Paid Ads</span>
+    <span class="hp-sep">·</span>
+    <span>No Dancing on Video</span>
+    <span class="hp-sep">·</span>
+    <span>Start With 0 Followers</span>
+  </div>
+
+  <p class="hero-sub">
+    Stop uploading digital products into an empty shop and hoping algorithms notice. Get the complete <strong>step-by-step Etsy &amp; Gumroad + Pinterest Playbook</strong>, AI prompt vault, click-first pin templates, and <strong>30-day daily launch plan</strong>.
+  </p>
+
+  <!-- SPLIT HERO: BUNDLE MOCKUP + OFFER CARD -->
+  <div class="hero-grid" id="get">
+    <div class="mockup-box">
+      <img src="assets/bundle-mockup.jpg" alt="PinShop Blueprint Complete 5-Part Digital Product Bundle Mockup">
+      <div class="mockup-cap">
+        <strong>Everything You Download Today:</strong>
+        <span class="mockup-pill">4 PDFs + 1 Spreadsheet</span>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcribbon">🔥 Launch Price — Complete 5-Asset Bundle</div>
+
+      <div class="price-row">
+        <span class="p-was" data-price="regular">$129</span>
+        <span class="p-now" data-price="launch">$27</span>
+      </div>
+      <p class="price-tag" data-savings>✓ Save $102 — Complete 5-Part Launch Bundle</p>
+
+      <div class="bundle-checklist">
+        <div class="bc-item"><span>📘 Core 10-Module Blueprint Playbook</span><span class="bc-val">$49 value</span></div>
+        <div class="bc-item"><span>🤖 Bonus #1: 25+ AI Creation &amp; SEO Prompts</span><span class="bc-val">$25 value</span></div>
+        <div class="bc-item"><span>✍️ Bonus #2: 30+ Viral Hooks &amp; Pin Layouts</span><span class="bc-val">$25 value</span></div>
+        <div class="bc-item"><span>📅 Bonus #3: 30-Day Daily Launch Planner</span><span class="bc-val">$15 value</span></div>
+        <div class="bc-item"><span>📊 Bonus #4: Click &amp; Revenue Tracker (PDF+CSV)</span><span class="bc-val">$15 value</span></div>
+      </div>
+
+      <a href="#" data-checkout class="cta">
+        ⚡ Yes — Get Instant Access for <span data-price="launch">$27</span> →
+      </a>
+      <div class="cta-micro">
+        <span>🔒 Secure Checkout</span><span>·</span>
+        <span>📦 Instant PDF + CSV</span><span>·</span>
+        <span>🚫 Zero Upsells</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pprow">
+    <div class="pp">🎯 12 proven Etsy/Gumroad niches</div>
+    <div class="pp">🤖 25+ copy-paste AI prompts</div>
+    <div class="pp">🎨 6 Canva pin layout wireframes</div>
+    <div class="pp">📅 30-day step-by-step plan</div>
+    <div class="pp">🛡️ Safe Etsy/Gumroad link rules</div>
+  </div>
+</section>
+
+<!-- NUMBER STAT BAR -->
+<div class="sbar">
+  <div class="sbar-row">
+    <div class="sitem"><div class="sn">5 Files</div><div class="sl">Complete digital kit</div></div>
+    <div class="sitem"><div class="sn">12 Niches</div><div class="sl">With keyword clusters</div></div>
+    <div class="sitem"><div class="sn">$0</div><div class="sl">Ad spend required</div></div>
+    <div class="sitem"><div class="sn">30 Days</div><div class="sl">Guided launch plan</div></div>
+  </div>
+</div>
+
+<!-- WHO IS THIS FOR -->
+<section class="sec-cream">
+  <div class="sw">
+    <span class="stag">Who This Bundle Is Built For</span>
+    <div class="sub-hl">Turn Pinterest searches into <span class="accent">Etsy &amp; Gumroad buyers</span> — without showing your face</div>
+    <h2 class="sh">No audience. No ad budget.<br><span class="hl">No design degree.</span> Just a clear system.</h2>
+    <p class="sp">Whether you are launching your very first printable or already have products sitting on Etsy or Gumroad with zero daily views, this bundle maps out every step.</p>
+
+    <div class="who-grid">
+      <div class="wc">
+        <div class="we">💻</div>
+        <h3>New Digital Product Creators</h3>
+        <p>Don't know what to sell or where to start? Learn how to validate demand first and build planners, guides, or Canva templates in a weekend.</p>
+        <span class="wc-num">Start from $0 inventory</span>
+      </div>
+      <div class="wc">
+        <div class="we">🛍️</div>
+        <h3>Etsy Digital Shop Owners</h3>
+        <p>Tired of Etsy search saturation and paying for Etsy Ads? Bring high-intent external traffic straight from Pinterest search into your listings.</p>
+        <span class="wc-num">Evergreen listing clicks</span>
+      </div>
+      <div class="wc">
+        <div class="we">🚀</div>
+        <h3>Gumroad &amp; Payhip Sellers</h3>
+        <p>Gumroad doesn't give beginners free discovery traffic on its own. Pinterest becomes your daily automated discovery engine.</p>
+        <span class="wc-num">24/7 organic funnel</span>
+      </div>
+      <div class="wc">
+        <div class="we">👩‍👧</div>
+        <h3>Busy Parents &amp; 9–5 Side Hustlers</h3>
+        <p>No time to film daily TikToks or keep up with Instagram trends? Batch-create a week of pins in 60 minutes and schedule them ahead.</p>
+        <span class="wc-num">Faceless &amp; flexible</span>
+      </div>
+      <div class="wc">
+        <div class="we">🎓</div>
+        <h3>Students &amp; Zero-Budget Starters</h3>
+        <p>Built around free tools: free Pinterest Business account, free Canva tier, free Gumroad setup, and copy-paste AI prompts.</p>
+        <span class="wc-num">Zero expensive software</span>
+      </div>
+      <div class="wc">
+        <div class="we">✍️</div>
+        <h3>Template &amp; Ebook Makers</h3>
+        <p>Notion setups, budget spreadsheets, wedding checklists, kids printables — Pinterest users actively search to buy digital downloads daily.</p>
+        <span class="wc-num">Create once, sell repeatedly</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN SECTION -->
+<section class="sec-white">
+  <div class="sw">
+    <span class="stag">Sound Familiar?</span>
+    <div class="sub-hl">Why great digital products still get <span class="accent">zero views and zero sales</span></div>
+    <h2 class="sh">Social feeds expire in hours.<br><span class="hl">Pinterest compounds for months.</span></h2>
+
+    <div class="pain-list">
+      <div class="pi"><span class="pi-x">📱</span><div class="pi-t"><strong>Instagram &amp; TikTok burn you out.</strong> You spend 2 hours editing a Reel, get 180 views, and the post disappears tomorrow — even with daily effort.</div></div>
+      <div class="pi"><span class="pi-x">💸</span><div class="pi-t"><strong>Paid ads eat your profit margin.</strong> On a $9–$27 digital product, paid clicks on Facebook or Etsy Ads quickly cost more than you earn per sale.</div></div>
+      <div class="pi"><span class="pi-x">😴</span><div class="pi-t"><strong>YouTube leaves you overwhelmed.</strong> Watching 30 random tutorials gives conflicting tips with no morning-by-morning checklist to follow.</div></div>
+      <div class="pi"><span class="pi-x">🌀</span><div class="pi-t"><strong>Your Etsy or Gumroad shop is invisible.</strong> Great PDFs don't sell if buyers never click onto the page. Traffic is the missing half of the equation.</div></div>
+    </div>
+
+    <div class="sol">
+      <p>Pinterest is a <strong>visual search engine</strong> — not a popularity contest. A brand-new account with <strong>0 followers</strong> can rank for buyer keywords and send targeted visitors straight to your Etsy listings or Gumroad checkout page month after month.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE THE GUIDE + BONUSES -->
+<section class="sec-cream">
+  <div class="sw">
+    <span class="stag">Inside The Core Playbook</span>
+    <div class="sub-hl">10 actionable modules. <span class="accent">Zero fluff.</span> Built to execute today.</div>
+    <h2 class="sh">Everything included.<br><span class="hl">Step by step.</span></h2>
+    <p class="sp">Every module focuses on real implementation — from choosing a digital product buyers already want to optimizing pins that earn clicks instead of silent scrolls.</p>
+
+    <div class="inside-grid">
+      <div class="ic"><div class="ic-n">Module 01</div><h3>Etsy vs. Gumroad Shop Strategy</h3><p>Which platform fits your first product best, how to price between $7–$37, and how to package files so buyers feel instant delight.</p><span class="ic-tag">⚡ Start here — Day 1</span></div>
+      <div class="ic"><div class="ic-n">Module 02</div><h3>12 Proven Digital Product Niches</h3><p>High-buyer-intent digital categories with specific sub-niche angles, real search phrases, and product formats that avoid saturated markets.</p><span class="ic-tag">🎯 Beat niche paralysis</span></div>
+      <div class="ic"><div class="ic-n">Module 03</div><h3>Fast Product Creation With Free AI</h3><p>Use structured AI prompts to outline, draft, and polish checklists, ebooks, planners, and shop descriptions in a single weekend.</p><span class="ic-tag">🤖 Weekend launch workflow</span></div>
+      <div class="ic"><div class="ic-n">Module 04</div><h3>Pinterest Trust Account Architecture</h3><p>Business account setup, keyword-rich bio formula, claimed domain basics, and clean 5-board SEO structure from day one.</p><span class="ic-tag">🏗️ Algorithm foundation</span></div>
+      <div class="ic"><div class="ic-n">Module 05</div><h3>Click-First Pin Design Formula</h3><p>2:3 vertical hierarchy, hook sizing for mobile feeds, color contrast, and the 6 Canva layout wireframes built to stop scrollers.</p><span class="ic-tag">🎨 6 layout blueprints</span></div>
+      <div class="ic"><div class="ic-n">Module 06</div><h3>Safe Linking for Etsy &amp; Gumroad</h3><p>Avoid new-account spam flags! Learn direct-link vs. landing-page routing, UTM tracking, and pin link pacing rules.</p><span class="ic-tag">🛡️ Protect your account</span></div>
+      <div class="ic"><div class="ic-n">Module 07</div><h3>Outbound Clicks &amp; Description SEO</h3><p>Turn impressions into shop visits using open-loop descriptions, clear CTA phrasing, and keyword placement that triggers buyer intent.</p><span class="ic-tag">💰 Where sales start</span></div>
+      <div class="ic"><div class="ic-n">Module 08</div><h3>Sustainable Pinning Cadence</h3><p>How many fresh pins per day actually build momentum without burnout, plus peak US time windows and smart board rotation.</p><span class="ic-tag">📅 Weekly routine</span></div>
+      <div class="ic"><div class="ic-n">Module 09</div><h3>5-Minute Analytics &amp; Scaling</h3><p>The exact 3 metrics to check weekly (Impressions, Outbound Click Rate, Saves) and when to clone winning pin angles.</p><span class="ic-tag">📊 Scale winners</span></div>
+      <div class="ic"><div class="ic-n">Module 10</div><h3>Conversion &amp; Bundle Scaling</h3><p>How to bundle $9 printables into $27–$47 toolkits, add order bumps, and turn one-time shoppers into repeat buyers.</p><span class="ic-tag">📈 Grow order value</span></div>
+    </div>
+
+    <div style="margin-top:44px;">
+      <span class="stag">Plus 4 Instant-Download Bonus Toolkits</span>
+      <div class="bonus-grid">
+        <div class="bcard">
+          <span class="b-badge">Bonus #1 · PDF</span>
+          <h4>25+ AI Prompt Vault</h4>
+          <p>Ready-to-paste prompts for digital product ideas, Etsy/Gumroad descriptions, Pinterest keyword clusters, and pin visual briefs.</p>
+          <div class="b-val">Included Free ($25 value)</div>
+        </div>
+        <div class="bcard">
+          <span class="b-badge">Bonus #2 · PDF</span>
+          <h4>30+ Viral Hook &amp; Pin Templates</h4>
+          <p>Fill-in-the-blank Pin title formulas, curiosity-gap descriptions, and 6 clean Canva wireframe layouts.</p>
+          <div class="b-val">Included Free ($25 value)</div>
+        </div>
+        <div class="bcard">
+          <span class="b-badge">Bonus #3 · PDF</span>
+          <h4>30-Day Launch Planner</h4>
+          <p>Daily Day 1–30 execution checkboxes so you always know today's exact 30-minute task.</p>
+          <div class="b-val">Included Free ($15 value)</div>
+        </div>
+        <div class="bcard">
+          <span class="b-badge">Bonus #4 · PDF + CSV</span>
+          <h4>Traffic &amp; Sales Tracker</h4>
+          <p>Printable log plus Google Sheets/Excel `.csv` template to track pins, clicks, CTR %, and shop sales.</p>
+          <div class="b-val">Included Free ($15 value)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████████  OUTBOUND CLICKS SECTION  ████████ -->
+<section class="oc-sec">
+  <div class="oc-wrap">
+    <span class="oc-tag">The Core Difference</span>
+    <h2 class="oc-h">Stop Chasing Empty Views —<br><em>Engineer Pins For Outbound Clicks</em></h2>
+    <p class="oc-sub">
+      <strong>Impressions don't pay your bills — clicks to your Etsy or Gumroad page do.</strong> Most new pinners design "pretty quote graphics" that get saved and ignored. This system teaches how to structure every pin so tapping through to your product feels like the natural next step.
+    </p>
+
+    <div class="oc-grid">
+      <div class="occard">
+        <div class="occard-icon">🔗</div>
+        <h3>Click-First Visual Hierarchy</h3>
+        <p>Where to place your headline, mockup preview, and mini-CTA button inside the 2:3 canvas so mobile users instantly tap.</p>
+        <span class="oct">Module 05 Blueprints</span>
+      </div>
+      <div class="occard">
+        <div class="occard-icon">📝</div>
+        <h3>Open-Loop Description Copy</h3>
+        <p>Write keyword-rich descriptions that explain the outcome without giving away the template—driving real curiosity clicks.</p>
+        <span class="oct">30+ Copy-Paste Hooks</span>
+      </div>
+      <div class="occard">
+        <div class="occard-icon">🎯</div>
+        <h3>Etsy &amp; Gumroad Link Routing</h3>
+        <p>How to bridge from Pinterest cleanly to your product listing or multi-link hub so visitors convert instead of bouncing.</p>
+        <span class="oct">Module 06 Safe Links</span>
+      </div>
+      <div class="occard">
+        <div class="occard-icon">📈</div>
+        <h3>Fresh-Pin Multiplication Loop</h3>
+        <p>Turn one winning digital product into 5 distinct pin angles targeting different buyer pain points and search keywords.</p>
+        <span class="oct">Module 08 Cadence</span>
+      </div>
+      <div class="occard">
+        <div class="occard-icon">⏰</div>
+        <h3>Peak US Search Windows</h3>
+        <p>Schedule your pins when US digital shoppers are actively browsing planners, templates, and side-hustle tools.</p>
+        <span class="oct">Schedule Guide Inside</span>
+      </div>
+      <div class="occard">
+        <div class="occard-icon">🔍</div>
+        <h3>Keyword-Matched Boards</h3>
+        <p>Help Pinterest categorize every pin accurately within 48 hours by matching pin titles, descriptions, and board names.</p>
+        <span class="oct">Module 04 Setup</span>
+      </div>
+    </div>
+
+    <div class="oc-stat-row">
+      <div class="oc-stat"><div class="osn">2:3</div><div class="osl">Mobile-first 1000×1500 ratio</div></div>
+      <div class="oc-stat"><div class="osn">3–5</div><div class="osl">Fresh pin angles per product</div></div>
+      <div class="oc-stat"><div class="osn">100%</div><div class="osl">Organic buyer-intent search</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NICHES -->
+<section class="sec-dark">
+  <div class="sw">
+    <span class="stag" style="color:#FFD166">12 Buyer-Intent Digital Product Niches</span>
+    <div class="sub-hl" style="background:rgba(255,255,255,.08);color:#ddd;">Pick a proven category <span class="accent">where buyers already search</span> on Pinterest every day</div>
+    <h2 class="sh">Profitable niches <em style="color:#FFD166">beyond generic planners</em></h2>
+    <p class="sp">Inside Module 02, each niche comes with specific sub-niche ideas, exact Etsy/Gumroad product formats, and beginner keyword clusters.</p>
+    <div class="niche-grid">
+      <div class="np">💰 Budget &amp; Debt Trackers</div>
+      <div class="np">🏠 Home Organization Kits</div>
+      <div class="np">💍 Wedding Templates</div>
+      <div class="np">🍽️ Meal &amp; Grocery Planners</div>
+      <div class="np">👶 Kids Printable Activities</div>
+      <div class="np">📓 Notion Life &amp; Study Hubs</div>
+      <div class="np">🏋️ Fitness &amp; Habit Logs</div>
+      <div class="np">🐾 Pet Care &amp; Training Logs</div>
+      <div class="np">✈️ Travel Itinerary Kits</div>
+      <div class="np">🎨 Small Biz Canva Kits</div>
+      <div class="np">📚 Exam &amp; Study Planners</div>
+      <div class="np">🌿 Garden &amp; Homestead Logs</div>
+    </div>
+    <div class="niche-note">🎯 Every niche includes sub-niche angles, exact Pinterest search keywords, and recommended Etsy/Gumroad pricing</div>
+  </div>
+</section>
+
+<!-- 7-DAY QUICK START SPRINT -->
+<section class="promise-sec">
+  <div class="promise-wrap">
+    <span class="ptag">7-Day Quick-Start Launch Sprint</span>
+    <h2 class="promise-h">Go from blank page to live shop<br><u>and live Pinterest funnel in 7 days.</u></h2>
+    <p class="promise-sub">No endless planning. Follow the first seven daily checkboxes in Bonus #3 so your digital product, checkout page, and first 10 SEO pins are live within one week.</p>
+    <div class="pday-grid">
+      <div class="pday"><div class="pday-label">Day 1 – 2</div><h4>Niche + First Digital Asset</h4><p>Validate one focused sub-niche using Module 02 and build your clean printable or template using the AI Prompt Vault.</p></div>
+      <div class="pday"><div class="pday-label">Day 3 – 4</div><h4>Shop Live + Pinterest Setup</h4><p>Publish your Gumroad or Etsy listing with SEO copy, optimize your Pinterest Business profile, and build 5 keyword boards.</p></div>
+      <div class="pday"><div class="pday-label">Day 5 – 6</div><h4>First 10 Click-First Pins</h4><p>Design 5–10 vertical pins in Canva using the layout blueprints and hook templates, then schedule across your boards.</p></div>
+      <div class="pday"><div class="pday-label">Day 7</div><h4>📊 First Audit &amp; Refinement</h4><p>Log initial impressions and outbound clicks in your Tracker, refine top keywords, and lock in your Week 2 routine.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 30-DAY ROADMAP -->
+<section class="sec-white">
+  <div class="sw">
+    <span class="stag">30-Day Execution Roadmap</span>
+    <div class="sub-hl">Know your exact <span class="accent">30-minute daily action</span> every single morning</div>
+    <h2 class="sh">Week by week.<br><span class="hl">Pin by pin. Sale by sale.</span></h2>
+    <div class="weeks">
+      <div class="week">
+        <div class="wkc"><span class="wl">WK</span><span class="wn">1</span></div>
+        <div class="wkb">
+          <h3>Validate Product → Publish Listing → Optimize Account</h3>
+          <p>Choose your digital product niche, create a clean downloadable PDF/template, publish it on Gumroad or Etsy, and configure your Pinterest Business profile and initial 5 SEO boards.</p>
+          <span class="wm">🎯 Milestone: Shop live + first 10 pins published</span>
+        </div>
+      </div>
+      <div class="week">
+        <div class="wkc"><span class="wl">WK</span><span class="wn">2</span></div>
+        <div class="wkb">
+          <h3>Consistent Pinning Cadence → Keyword Indexing</h3>
+          <p>Publish fresh pin variations pointing to your product using Module 07 description formulas. Pinterest begins indexing your boards and testing your pins in home feeds and search results.</p>
+          <span class="wm">🔍 Milestone: Outbound clicks &amp; saves tracking</span>
+        </div>
+      </div>
+      <div class="week">
+        <div class="wkc"><span class="wl">WK</span><span class="wn">3</span></div>
+        <div class="wkb">
+          <h3>Spot Winning Hooks → Add Second Product Angle</h3>
+          <p>Use the 5-minute weekly analytics audit to identify which pin colors, headlines, and boards earn the highest click-through rate — then create fresh variations of winners.</p>
+          <span class="wm">📈 Milestone: Double down on top CTR templates</span>
+        </div>
+      </div>
+      <div class="week">
+        <div class="wkc"><span class="wl">WK</span><span class="wn">4</span></div>
+        <div class="wkb">
+          <h3>Bundle Offers → Evergreen Shop System</h3>
+          <p>Package related templates into higher-value bundles ($27–$47), set up order bumps, and turn your weekly pinning routine into a repeatable traffic flywheel.</p>
+          <span class="wm">🏆 Milestone: Repeatable digital shop engine</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATOR PATHWAYS / REVIEW SLOTS -->
+<section class="sec-cream">
+  <div class="sw">
+    <span class="stag">Real-World Application</span>
+    <div class="sub-hl">How sellers apply this system <span class="accent">across niches</span></div>
+    <h2 class="sh">One blueprint.<br><span class="hl">Multiple digital shop models.</span></h2>
+    <p class="sp" style="margin-bottom:8px;">Below are common digital shop setups this bundle is built for. <em>(Store owner tip: replace these cards with verified buyer reviews as your customers share results!)</em></p>
+
+    <div class="tgrid">
+      <div class="tc">
+        <div class="tc-stars">PATHWAY 01 · PRINTABLES</div>
+        <p class="tc-q">"Start with a $9–$15 minimalist household budget &amp; bill tracker PDF on Etsy, backed by 5 keyword-focused pins targeting debt-payoff searches."</p>
+        <div class="tc-res"><strong>Target Format: Printable PDF Bundle</strong><span>Low creation time · High evergreen search</span></div>
+        <div class="tc-author"><div class="av a1">P1</div><div class="tc-info"><strong>Personal Finance Seller</strong><span>Ideal for beginners using Canva Free</span></div></div>
+        <span class="tc-badge">📌 Niche: Budget &amp; Finance</span>
+      </div>
+
+      <div class="tc">
+        <div class="tc-stars">PATHWAY 02 · GUMROAD TOOLKIT</div>
+        <p class="tc-q">"Bundle a niche Notion dashboard + quick-start PDF guide at $24–$29 on Gumroad and drive daily discovery through problem-solving pins."</p>
+        <div class="tc-res"><strong>Target Format: Template + Guide Combo</strong><span>Higher profit per order · $0 monthly fee</span></div>
+        <div class="tc-author"><div class="av a2">P2</div><div class="tc-info"><strong>Notion &amp; Study Creator</strong><span>Zero audience needed to launch</span></div></div>
+        <span class="tc-badge">📌 Niche: Student Productivity</span>
+      </div>
+
+      <div class="tc">
+        <div class="tc-stars">PATHWAY 03 · WEDDING TEMPLATES</div>
+        <p class="tc-q">"Sell editable Canva wedding checklists, seating charts, and signage bundles to brides actively planning months ahead on Pinterest."</p>
+        <div class="tc-res"><strong>Target Format: Editable Canva Links</strong><span>Massive buyer intent on Pinterest</span></div>
+        <div class="tc-author"><div class="av a3">P3</div><div class="tc-info"><strong>Event Template Shop</strong><span>High-value bundle opportunities</span></div></div>
+        <span class="tc-badge">📌 Niche: Wedding Planning</span>
+      </div>
+
+      <div class="tc">
+        <div class="tc-stars">PATHWAY 04 · MEAL &amp; HOME KITS</div>
+        <p class="tc-q">"Pair a weekly grocery list + family meal planner printable with helpful meal-prep pins that link directly to your Etsy shop."</p>
+        <div class="tc-res"><strong>Target Format: 15-Page Kitchen Binder</strong><span>Strong save-to-click viral potential</span></div>
+        <div class="tc-author"><div class="av a4">P4</div><div class="tc-info"><strong>Home &amp; Family Creator</strong><span>Great for weekend batch pinning</span></div></div>
+        <span class="tc-badge">📌 Niche: Meal Planning</span>
+      </div>
+
+      <div class="tc">
+        <div class="tc-stars">PATHWAY 05 · SMALL BIZ TEMPLATES</div>
+        <p class="tc-q">"Offer plug-and-play Instagram, Pinterest, or ebook Canva templates for coaches and local shops searching for faster marketing assets."</p>
+        <div class="tc-res"><strong>Target Format: B2B Canva Kit ($27–$47)</strong><span>Repeat buyers &amp; bundle upgrades</span></div>
+        <div class="tc-author"><div class="av a5">P5</div><div class="tc-info"><strong>Creator Toolkit Seller</strong><span>Works well on both Etsy &amp; Gumroad</span></div></div>
+        <span class="tc-badge">📌 Niche: Small Business Kits</span>
+      </div>
+
+      <div class="tc">
+        <div class="tc-stars">PATHWAY 06 · KIDS PRINTABLES</div>
+        <p class="tc-q">"Create seasonal busy-book pages, chore charts, and learning packs that parents and teachers actively pin and purchase year-round."</p>
+        <div class="tc-res"><strong>Target Format: Printable Activity Pack</strong><span>Strong seasonal &amp; holiday spikes</span></div>
+        <div class="tc-author"><div class="av a6">P6</div><div class="tc-info"><strong>Parent &amp; Teacher Creator</strong><span>Easy to expand into full bundles</span></div></div>
+        <span class="tc-badge">📌 Niche: Kids &amp; Parenting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="sec-white">
+  <div class="sw">
+    <div class="gbox">
+      <div class="gi">🛡️</div>
+      <h2>The <em>7-Day Setup &amp; Action</em> Support Promise</h2>
+      <p>Follow the first 7 days of the Launch Planner — pick your niche, publish your digital product, set up your Pinterest boards, and post your initial pins. If you get stuck at any step, email support with your profile or shop link for practical, actionable feedback so you never stall out.</p>
+      <div class="gchips">
+        <span class="gc">✓ Instant access to all 5 files</span>
+        <span class="gc">✓ Beginner-friendly steps</span>
+        <span class="gc">✓ Lifetime file access</span>
+        <span class="gc">✓ Direct email support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-cream">
+  <div class="sw">
+    <span class="stag">Real Questions. Honest Answers.</span>
+    <h2 class="sh">No hype. <span class="hl">Everything clearly answered.</span></h2>
+    <div class="flist">
+      <div class="fi"><div class="fq">Do I need tech skills, a website, or paid tools to start?<span class="fqicon">+</span></div><div class="fa">No. Everything inside the blueprint uses beginner-friendly free platforms: a free Pinterest Business account, Canva's free plan for pins and PDFs, and Gumroad ($0/month) or Etsy to deliver your digital files automatically when someone buys.</div></div>
+      <div class="fi"><div class="fq">What exact files do I receive after buying?<span class="fqicon">+</span></div><div class="fa">You receive instant access to 5 digital files: (1) The Core 10-Module PinShop Blueprint Playbook PDF, (2) Bonus #1: 25+ AI Prompt Pack PDF, (3) Bonus #2: 30+ Hook &amp; Pin Layout Templates PDF, (4) Bonus #3: 30-Day Launch Planner PDF, and (5) Bonus #4: Traffic &amp; Revenue Tracker (PDF + `.csv` file for Google Sheets/Excel).</div></div>
+      <div class="fi"><div class="fq">How long until I see clicks or my first sale?<span class="fqicon">+</span></div><div class="fa">Pinterest is a search engine, not an instant viral lottery. Most consistent sellers start seeing initial impressions and early clicks in Weeks 1–2 as pins get indexed, with traffic compounding across Weeks 3–8 as boards build topical relevance. Individual results always depend on your niche, product quality, and consistency.</div></div>
+      <div class="fi"><div class="fq">Should I sell my digital products on Etsy or Gumroad?<span class="fqicon">+</span></div><div class="fa">Module 01 walks through both options clearly. Gumroad is completely free to start with zero listing fees and simple link sharing; Etsy gives you built-in marketplace shoppers plus a $0.20 per-listing fee. Many creators start on Gumroad and expand to Etsy (or use both together).</div></div>
+      <div class="fi"><div class="fq">Can I do this completely faceless without filming videos?<span class="fqicon">+</span></div><div class="fa">Yes. Static vertical 2:3 graphic pins with clean mockups and strong typography still drive massive outbound clicks on Pinterest without ever stepping in front of a camera.</div></div>
+      <div class="fi"><div class="fq">Is there any recurring subscription or hidden upsell?<span class="fqicon">+</span></div><div class="fa">None. It is a single one-time payment of <span data-price="launch">$27</span> for the entire 5-part bundle, yours to keep and use across as many digital products as you launch.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="fsec" id="final">
+  <h2>
+    Stop guessing.<br>
+    Launch your shop.<br>
+    Get the full <span class="hl">5-part bundle today.</span>
+  </h2>
+  <span class="fsub">Everything you need to create your digital product, set up your Pinterest traffic engine, and follow a structured 30-day launch plan — in one instant download.</span>
+
+  <div class="fpb">
+    <div class="fprow"><span class="fpwas" data-price="regular">$129</span><span class="fpnow" data-price="launch">$27</span></div>
+    <div class="fpsave" data-savings>Save $102 — Complete 5-Part Launch Bundle</div>
+  </div>
+
+  <a href="#" data-checkout class="cta-lg">⚡ Get Instant Access — <span data-price="launch">$27</span> →</a>
+
+  <div class="trust-row">
+    <span class="tr">🔒 <b>Secure checkout</b></span>
+    <span class="tr">📦 <b>Instant delivery</b></span>
+    <span class="tr">📘 <b>4 PDFs + CSV Tracker</b></span>
+    <span class="tr">♾️ <b>Lifetime access</b></span>
+    <span class="tr">🚫 <b>Zero upsells</b></span>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="yr">2026</span> <span data-brand>PinShop Blueprint</span> &nbsp;·&nbsp; <a href="#get">Get Bundle</a> &nbsp;·&nbsp; <a id="support-link" href="mailto:support@yourdomain.com">Support</a></p>
+  <p style="margin-top:8px;color:#555;max-width:720px;margin-left:auto;margin-right:auto;line-height:1.6;">Educational digital product. Individual traffic and income results vary based on effort, niche demand, product quality, and consistency. No specific earnings are guaranteed. Not affiliated with Pinterest, Etsy, or Gumroad.</p>
+</footer>
+
+<!-- MOBILE FLOAT BAR -->
+<div class="fbar" id="fbar">
+  <div>
+    <div class="fb-was" data-price="regular">$129</div>
+    <div class="fb-price" data-price="launch">$27</div>
+    <div class="fb-spots">5-Part Digital Bundle</div>
+  </div>
+  <a href="#" data-checkout class="fb-cta">Get Access <span data-price="launch">$27</span> →</a>
+</div>
+
+<!-- SETUP REMINDER MODAL (ONLY SHOWN IF CHECKOUT URL STILL HAS PLACEHOLDER) -->
+<div class="setup-modal" id="setup-modal" role="dialog" aria-modal="true">
+  <div class="setup-card">
+    <h3>Connect Your Checkout Link</h3>
+    <p>This button is working! Right now <code>checkoutUrl</code> in <code>index.html</code> is still set to the placeholder <code>YOURNAME.gumroad.com</code>.</p>
+    <p>Follow Step 2 of <strong>START-HERE-Launch-Guide</strong> to upload your bundle to Gumroad and paste your real product URL into <code>SITE_CONFIG.checkoutUrl</code> at the top of this file.</p>
+    <button class="setup-close" id="setup-close">Got It</button>
+  </div>
+</div>
+
+<script>
+// Apply SITE_CONFIG across the page
+(function initConfig() {
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-brand]').forEach(el => el.textContent = SITE_CONFIG.brandName);
+  document.querySelectorAll('[data-price="launch"]').forEach(el => el.textContent = SITE_CONFIG.launchPrice);
+  document.querySelectorAll('[data-price="regular"]').forEach(el => el.textContent = SITE_CONFIG.regularPrice);
+  document.querySelectorAll('[data-savings]').forEach(el => el.textContent = '✓ ' + SITE_CONFIG.savingsLine);
+
+  const sup = document.getElementById('support-link');
+  if (sup) sup.href = 'mailto:' + SITE_CONFIG.supportEmail;
+
+  const modal = document.getElementById('setup-modal');
+  const closeBtn = document.getElementById('setup-close');
+  if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+  if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
+
+  document.querySelectorAll('[data-checkout]').forEach(btn => {
+    btn.href = SITE_CONFIG.checkoutUrl;
+    btn.target = '_blank';
+    btn.rel = 'noopener noreferrer';
+    btn.addEventListener('click', (e) => {
+      if (SITE_CONFIG.checkoutUrl.includes('YOURNAME')) {
+        e.preventDefault();
+        modal.classList.add('open');
+      }
+    });
+  });
+})();
+
+// FAQ Accordion
+document.querySelectorAll('.fq').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.fi').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// Mobile Sticky Bar
+function syncFbar() {
+  const fb = document.getElementById('fbar');
+  if (fb) fb.style.display = window.innerWidth > 640 ? 'none' : 'flex';
+}
+syncFbar();
+window.addEventListener('resize', syncFbar);
+</script>
+</body>
+</html>
