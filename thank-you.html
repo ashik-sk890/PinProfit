@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful — Download Your PinShop Blueprint Bundle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --P: #E60023;
+      --P-dark: #B8001B;
+      --gold: #C97C00;
+      --gold-bg: #FEF8EC;
+      --green: #10B981;
+      --green-dark: #059669;
+      --ink: #111827;
+      --mid: #4B5563;
+      --light: #9CA3AF;
+      --bg: #FDFBF7;
+      --card: #FFFFFF;
+      --border: #E5E7EB;
+      --r12: 12px;
+      --r16: 16px;
+      --r24: 24px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 30px 16px 80px;
+    }
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .badge-success {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ECFDF5;
+      color: var(--green-dark);
+      border: 1px solid #A7F3D0;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .icon-check {
+      width: 20px;
+      height: 20px;
+      background: var(--green);
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(26px, 4.5vw, 36px);
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--mid);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--r24);
+      padding: 32px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
+    }
+    .btn-main-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      background: linear-gradient(135deg, var(--P) 0%, var(--P-dark) 100%);
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 24px;
+      border-radius: var(--r16);
+      box-shadow: 0 10px 25px rgba(230, 0, 35, 0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .btn-main-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(230, 0, 35, 0.45);
+    }
+    .sec-title {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--light);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .file-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .file-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #F9FAFB;
+      border: 1px solid var(--border);
+      border-radius: var(--r12);
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .file-row:hover {
+      background: #F3F4F6;
+      border-color: #D1D5DB;
+    }
+    .file-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .file-icon {
+      width: 36px;
+      height: 36px;
+      background: #FEE2E2;
+      color: var(--P);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+    .file-icon.csv {
+      background: #DEF7EC;
+      color: #03543F;
+    }
+    .file-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      display: block;
+    }
+    .file-meta {
+      font-size: 12px;
+      color: var(--light);
+    }
+    .btn-dl {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--P);
+      background: #FFF1F2;
+      border: 1px solid #FFE4E6;
+      padding: 6px 14px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .help-card {
+      background: #F9FAFB;
+      border: 1px dashed var(--border);
+      border-radius: var(--r16);
+      padding: 20px;
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+    .help-card strong {
+      color: var(--ink);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: var(--light);
+    }
+    .footer a {
+      color: var(--P);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="badge-success">
+        <span class="icon-check">✓</span> Payment Confirmed via PayPal
+      </div>
+      <h1>Thank You for Your Order!</h1>
+      <p class="subtitle">Your complete 5-part PinShop digital product bundle is ready for instant download below.</p>
+    </div>
+
+    <div class="card">
+      <a href="downloads/PinShop-Complete-Digital-Bundle.zip" class="btn-main-download" download>
+        <span>📦</span>
+        <span>Download Complete 5-Part Bundle (.ZIP)</span>
+      </a>
+
+      <div class="sec-title">
+        <span>📂</span> Or Download Individual Files
+      </div>
+
+      <div class="file-list">
+        <a href="downloads/PinShop-Blueprint-Guide.pdf" class="file-row" target="_blank" download>
+          <div class="file-info">
+            <div class="file-icon">PDF</div>
+            <div>
+              <span class="file-name">PinShop Blueprint Guide</span>
+              <span class="file-meta">Core 10-Module Playbook · 13 Pages PDF</span>
+            </div>
+          </div>
+          <span class="btn-dl">Download</span>
+        </a>
+
+        <a href="downloads/Bonus-1-AI-Prompt-Pack.pdf" class="file-row" target="_blank" download>
+          <div class="file-info">
+            <div class="file-icon">PDF</div>
+            <div>
+              <span class="file-name">Bonus 1: AI Prompt Pack</span>
+              <span class="file-meta">26 Copy-Paste Prompts for Canva, ChatGPT & Etsy</span>
+            </div>
+          </div>
+          <span class="btn-dl">Download</span>
+        </a>
+
+        <a href="downloads/Bonus-2-Hook-And-Pin-Templates.pdf" class="file-row" target="_blank" download>
+          <div class="file-info">
+            <div class="file-icon">PDF</div>
+            <div>
+              <span class="file-name">Bonus 2: Viral Hooks & Pin Templates</span>
+              <span class="file-meta">32 Headline Hooks & 6 Canva Layout Wireframes</span>
+            </div>
+          </div>
+          <span class="btn-dl">Download</span>
+        </a>
+
+        <a href="downloads/Bonus-3-30-Day-Launch-Planner.pdf" class="file-row" target="_blank" download>
+          <div class="file-info">
+            <div class="file-icon">PDF</div>
+            <div>
+              <span class="file-name">Bonus 3: 30-Day Launch Planner</span>
+              <span class="file-meta">Day 1–30 Actionable Daily Checklists</span>
+            </div>
+          </div>
+          <span class="btn-dl">Download</span>
+        </a>
+
+        <a href="downloads/Bonus-4-Traffic-And-Sales-Tracker.pdf" class="file-row" target="_blank" download>
+          <div class="file-info">
+            <div class="file-icon">PDF</div>
+            <div>
+              <span class="file-name">Bonus 4: Traffic & Sales Tracker (PDF)</span>
+              <span class="file-meta">Printable Weekly Analytics & Conversion Log</span>
+            </div>
+          </div>
+          <span class="btn-dl">Download</span>
+        </a>
+
+        <a href="downloads/Bonus-4-Traffic-And-Sales-Tracker.csv" class="file-row" download>
+          <div class="file-info">
+            <div class="file-icon csv">CSV</div>
+            <div>
+              <span class="file-name">Bonus 4: Tracker Spreadsheet (.CSV)</span>
+              <span class="file-meta">Ready for Google Sheets, Microsoft Excel & Apple Numbers</span>
+            </div>
+          </div>
+          <span class="btn-dl">Download</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="help-card">
+      <strong>💡 How to Access Your Files:</strong><br>
+      • <strong>On iPhone / iPad:</strong> Tap any file above. Tap the Share icon (square with arrow) and choose "Save to Files".<br>
+      • <strong>On Android:</strong> Tap Download and the files will be in your "Downloads" app or Files folder.<br>
+      • <strong>On Computer:</strong> Click the big red button to save the entire ZIP folder to your desktop.<br><br>
+      <strong>Customer Support:</strong> If you need any assistance, reach out directly to <a href="mailto:rafiulmallick8@gmail.com" style="color:var(--P); font-weight:700;">rafiulmallick8@gmail.com</a>.
+    </div>
+
+    <div class="footer">
+      © 2026 PinShop Blueprint · All rights reserved · <a href="index.html">Back to Main Website</a>
+    </div>
+  </div>
+</body>
+</html>
